@@ -3,6 +3,21 @@
 一个基于iFind数据接口获取可转债数据，并对数据进行处理的脚本。
 
 ## 安装指南
+
+### 前置要求
+本项目使用 [uv](https://docs.astral.sh/uv/) 进行依赖管理。请先安装uv：
+
+**Windows (PowerShell):**
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+**macOS/Linux:**
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### 安装步骤
 1. 克隆项目代码库到本地：
     ```bash
     git clone git@github.com:cuxt/convertible_bond_script.git
@@ -13,8 +28,14 @@
     ```
 3. 安装依赖项：
     ```bash
-    pip install -r requirements.txt
+    uv sync
     ```
+
+### 运行脚本
+使用uv运行脚本：
+```bash
+uv run src/demo1.py
+```
 
 ## 数据
 
